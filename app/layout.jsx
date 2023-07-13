@@ -26,12 +26,12 @@ export default function RootLayout({ children }) {
                     
                     <div className=" z-20 h-full w-full max-w-5xl flex-col">
                         {/*Title*/}
-                        <div className="flex md:justify-center justify-between items-center bg-gradient-to-b from-white via-white dark:from-black dark:via-black static md:bg-none">
+                        <div className="p-6 flex md:justify-center justify-between items-center bg-gradient-to-b from-white via-white dark:from-black dark:via-black static md:bg-none">
                             <Link
-                                className="flex p-6 pointer-events-auto md:p-0"
+                                className="flex pointer-events-auto md:p-0"
                                 href="/"
                             >
-                                <h1 className='text-5xl md:text-8xl lg:text-9xl'>R3F + Next.js</h1>
+                                <h1 className='text-3xl md:text-8xl lg:text-9xl'>R3F + Next.js</h1>
                             </Link>
                             <MobileNav />
                         </div>                 
@@ -46,7 +46,9 @@ export default function RootLayout({ children }) {
                             {children}
                         </div>
                     </div>
+
                     <Footer/>
+                    
                 </main>
             </body>
         </html>
