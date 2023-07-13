@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Background from '@/components/Background'
 import MobileNav from '@/components/MobileNav'
 import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <main className="flex flex-col min-h-screen items-center justify-start">
+                <main className="flex flex-col min-h-screen items-center ">
                     
                     <Background />
                     
@@ -40,12 +41,12 @@ export default function RootLayout({ children }) {
                     </div>
                     
                     {/*content*/}
-                    <div className='z-10 max-w-5xl md:flex-auto flex items-center justify-center h-screen absolute'>
+                    <div className='z-10 max-w-5xl flex-grow flex items-center justify-center'>
                         <div className='rounded-md bg-gray-100/75 p-5'>
                             {children}
                         </div>
                     </div>
-                    
+                    <Footer/>
                 </main>
             </body>
         </html>
